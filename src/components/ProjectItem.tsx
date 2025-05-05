@@ -31,22 +31,27 @@ export default function ProjectItem({ project }: Props) {
     <div className="border rounded p-4 bg-gray-50">
       {editing ? (
         <div className="mb-2">
+          <p>
           <input
             className="border p-2 rounded w-full mb-2"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
+          </p>
+          <p>
           <textarea
             className="border p-2 rounded w-full mb-2"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
+          </p>
+          
           <button
             onClick={handleEdit}
             className="bg-green-600 text-white px-3 py-1 rounded mr-2"
           >
             Lưu
-          </button>
+          </button> &nbsp;
           <button
             onClick={() => setEditing(false)}
             className="bg-gray-300 px-3 py-1 rounded"
